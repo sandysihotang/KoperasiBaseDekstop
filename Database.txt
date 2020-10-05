@@ -1,0 +1,68 @@
+create table user 
+(
+    idUser int not null auto_increment, 
+    nama varchar(50), 
+    username varchar(50), 
+    password varchar(10),
+    role int,
+    primary key(idUser)
+);
+
+create table barang 
+(
+    idBarang int not null auto_increment, 
+    nama varchar(255),
+    stok varchar(25), 
+    harga varchar(255), 
+    deskripsi varchar (500),
+    primary key(idBarang)   
+);
+
+create table laporan
+(
+    idLaporan int not null auto_increment, 
+    jenis_laporan varchar(255), 
+    tanggal date,
+    primary key(idLaporan)
+);
+
+create table transaksi
+(
+    idTransaksi int not null auto_increment,
+    idBarang int,
+    idUser int,
+kode_transaksi varchar(255),
+    jumlah_barang int, 
+    total_harga varchar(255), 
+tanggal_transaksi date,
+    primary key(idTransaksi),
+    foreign key(idBarang) references barang(idBarang),
+    foreign key(idUser) references user(idUser)
+);
+
+Create table simpanan(
+    idSimpanan int not null auto_increment,
+    idUser int,
+    jumlahSimpanan varchar(255),
+    primary key(idSimpanan),
+    foreign key(idUser) references user (idUser)
+);
+
+Create table pinjaman(
+    idPinjaman int not null auto_increment,
+    idUser int,
+    jumlahPinjaman varchar(255),
+    jumlahCicilan int,
+    tanggalPinjam date,
+    primary key(idPinjaman),
+    foreign key(idUser) references user (idUser)
+);
+
+Create table angsuran(
+    idAngsuran int not null auto_increment,
+    idUser int,
+    jumlahAngsuran varchar(255),
+    tanggalAngsuran date,
+    primary key(idAngsuran),
+    foreign key(idUser) references user (idUser)
+);

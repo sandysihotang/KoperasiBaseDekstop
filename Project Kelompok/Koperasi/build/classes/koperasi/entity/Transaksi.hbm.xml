@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-May-2019 14:24:01 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="koperasi.entity.Transaksi" table="TRANSAKSI" schema="PUBLIC" catalog="KEPERASI" optimistic-lock="version">
+        <id name="idtransaksi" type="java.lang.Integer">
+            <column name="IDTRANSAKSI" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="barang" class="koperasi.entity.Barang" fetch="select">
+            <column name="IDBARANG" />
+        </many-to-one>
+        <many-to-one name="user" class="koperasi.entity.User" fetch="select">
+            <column name="IDUSER" />
+        </many-to-one>
+        <property name="kodeTransaksi" type="string">
+            <column name="KODE_TRANSAKSI" />
+        </property>
+        <property name="jumlahBarang" type="java.lang.Integer">
+            <column name="JUMLAH_BARANG" />
+        </property>
+        <property name="totalHarga" type="string">
+            <column name="TOTAL_HARGA" />
+        </property>
+        <property name="tanggalTransaksi" type="date">
+            <column name="TANGGAL_TRANSAKSI" length="8" />
+        </property>
+    </class>
+</hibernate-mapping>

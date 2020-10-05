@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="layout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.TambahController">
+   <children>
+      <AnchorPane prefHeight="75.0" prefWidth="1030.0" style="-fx-background-color: #7C72FF;">
+         <children>
+            <Label layoutX="315.0" layoutY="12.0" text="SIKOPER" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="208.0" layoutY="75.0" prefHeight="441.0" prefWidth="823.0">
+         <children>
+            <Text layoutX="19.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Produk">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="19.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deskripsi">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="19.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stok">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="19.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Harga">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="namaProduk" layoutX="165.0" layoutY="37.0" prefHeight="27.0" prefWidth="615.0" style="-fx-border-color: black;" />
+            <JFXTextField fx:id="stok" layoutX="165.0" layoutY="99.0" prefHeight="27.0" prefWidth="615.0" style="-fx-border-color: black;" />
+            <JFXTextField fx:id="harga" layoutX="165.0" layoutY="162.0" prefHeight="27.0" prefWidth="615.0" style="-fx-border-color: black;" />
+            <JFXTextArea fx:id="deskripsi" layoutX="165.0" layoutY="224.0" prefHeight="83.0" prefWidth="615.0" style="-fx-border-color: black;" />
+            <JFXButton fx:id="btnTambah" layoutX="651.0" layoutY="390.0" onAction="#HandleButtonTambah" prefHeight="37.0" prefWidth="129.0" style="-fx-background-color: #7C72FF; -fx-border-color: black; -fx-border-radius: 1em; -fx-border-width: 2px; -fx-background-radius: 1em;" text="Tambah" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Label layoutX="63.0" layoutY="95.0" text="MENU" textFill="#7c72ff">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnBarang" layoutX="12.0" layoutY="163.0" onAction="#HandleButtonBarang" prefHeight="44.0" prefWidth="195.0" style="-fx-background-color: #E1E1E1; -fx-border-color: #000000; -fx-border-width: 2px;" text="Barang">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnTransaksi" layoutX="12.0" layoutY="225.0" onAction="#HandleButtonTransaksi" prefHeight="44.0" prefWidth="195.0" style="-fx-background-color: #E1E1E1; -fx-border-color: black; -fx-border-width: 2px;" text="Transaksi">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnLaporan" layoutX="12.0" layoutY="287.0" onAction="#HandleButtonLaporan" prefHeight="44.0" prefWidth="195.0" style="-fx-background-color: #E1E1E1; -fx-border-color: black; -fx-border-width: 2px;" text="Laporan">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnKeluar" layoutX="12.0" layoutY="453.0" onAction="#HandleButtonKeluar" prefHeight="44.0" prefWidth="195.0" style="-fx-background-color: #E1E1E1; -fx-border-color: black; -fx-border-width: 2px;" text="Keluar" textFill="#7c72ff">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

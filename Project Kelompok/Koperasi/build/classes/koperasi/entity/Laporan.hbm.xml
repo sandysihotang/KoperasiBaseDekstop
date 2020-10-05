@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-May-2019 14:24:01 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="koperasi.entity.Laporan" table="LAPORAN" schema="PUBLIC" catalog="KEPERASI" optimistic-lock="version">
+        <id name="idlaporan" type="java.lang.Integer">
+            <column name="IDLAPORAN" />
+            <generator class="identity" />
+        </id>
+        <property name="jenisLaporan" type="string">
+            <column name="JENIS_LAPORAN" />
+        </property>
+        <property name="tanggal" type="date">
+            <column name="TANGGAL" length="8" />
+        </property>
+    </class>
+</hibernate-mapping>

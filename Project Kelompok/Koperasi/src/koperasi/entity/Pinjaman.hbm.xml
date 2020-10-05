@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-May-2019 14:24:01 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="koperasi.entity.Pinjaman" table="PINJAMAN" schema="PUBLIC" catalog="KEPERASI" optimistic-lock="version">
+        <id name="idpinjaman" type="java.lang.Integer">
+            <column name="IDPINJAMAN" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="user" class="koperasi.entity.User" fetch="select">
+            <column name="IDUSER" />
+        </many-to-one>
+        <property name="jumlahpinjaman" type="string">
+            <column name="JUMLAHPINJAMAN" />
+        </property>
+        <property name="jumlahcicilan" type="java.lang.Integer">
+            <column name="JUMLAHCICILAN" />
+        </property>
+        <property name="tanggalpinjam" type="date">
+            <column name="TANGGALPINJAM" length="8" />
+        </property>
+    </class>
+</hibernate-mapping>

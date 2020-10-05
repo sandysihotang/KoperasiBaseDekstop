@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="layout" prefHeight="515.0" prefWidth="1030.0" style="-fx-background-color: #291B1B;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.DashboardController">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="515.0" prefWidth="299.0" style="-fx-background-color: #7C72FF;">
+         <children>
+            <Label layoutX="102.0" layoutY="20.0" text="Menu" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnBarang" layoutX="27.0" layoutY="81.0" onAction="#HandleButtonBarang" prefHeight="43.0" prefWidth="245.0" style="-fx-background-color: #7C72FF; -fx-border-color: #000000; -fx-border-width: 2px;" text="Barang">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnTransaksi" layoutX="27.0" layoutY="153.0" onAction="#HandleButtonTransaksi" prefHeight="51.0" prefWidth="245.0" style="-fx-background-color: #7C72FF; -fx-border-color: #000000; -fx-border-width: 2px;" text="Transaksi">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnLaporan" layoutX="26.0" layoutY="225.0" onAction="#HandleButtonLaporan" prefHeight="51.0" prefWidth="245.0" style="-fx-background-color: #7C72FF; -fx-border-color: #000000; -fx-border-width: 2px;" text="Laporan">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnLogout" layoutX="26.0" layoutY="408.0" onAction="#HandleButtonLogout" prefHeight="51.0" prefWidth="245.0" style="-fx-background-color: #7C72FF; -fx-border-color: #000000; -fx-border-width: 2px;" text="Log out">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnSimpanPinjam" layoutX="27.0" layoutY="296.0" onAction="#HandleButtonSimpanPinjam" prefHeight="51.0" prefWidth="245.0" style="-fx-background-color: #7C72FF; -fx-border-color: #000000; -fx-border-width: 2px;" text="Simpan Pinjam">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <ImageView fitHeight="362.0" fitWidth="636.0" layoutX="376.0" layoutY="77.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/abcd.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="450.0" layoutY="226.0" text="Welcome to SIPKOPER" textFill="WHITE">
+         <font>
+            <Font name="Bradley Hand ITC" size="45.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

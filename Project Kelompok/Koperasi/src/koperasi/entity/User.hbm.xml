@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-May-2019 14:24:01 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="koperasi.entity.User" table="USER" schema="PUBLIC" catalog="KEPERASI" optimistic-lock="version">
+        <id name="iduser" type="java.lang.Integer">
+            <column name="IDUSER" />
+            <generator class="identity" />
+        </id>
+        <property name="nama" type="string">
+            <column name="NAMA" length="50" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" />
+        </property>
+        <property name="username" type="string">
+            <column name="USERNAME" length="50" />
+        </property>
+        <property name="password" type="string">
+            <column name="PASSWORD" length="10" />
+        </property>
+        <property name="role" type="java.lang.Integer">
+            <column name="ROLE" />
+        </property>
+        <set name="angsurans" table="ANGSURAN" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="IDUSER" />
+            </key>
+            <one-to-many class="koperasi.entity.Angsuran" />
+        </set>
+        <set name="simpanans" table="SIMPANAN" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="IDUSER" />
+            </key>
+            <one-to-many class="koperasi.entity.Simpanan" />
+        </set>
+        <set name="transaksis" table="TRANSAKSI" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="IDUSER" />
+            </key>
+            <one-to-many class="koperasi.entity.Transaksi" />
+        </set>
+        <set name="pinjamans" table="PINJAMAN" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="IDUSER" />
+            </key>
+            <one-to-many class="koperasi.entity.Pinjaman" />
+        </set>
+    </class>
+</hibernate-mapping>
